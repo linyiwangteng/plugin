@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" style="width: 100%; height: 100%;">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        ul li{
+            float: left;
+            width:150px;
+            list-style: none;
+        }
+        ul li img{
+            width:150px;
+        }
+    </style>
+
+</head>
+<body style="height: inherit;">
+    <div class="img_container">
+        <div class="img_box">
+            <img src="" alt="" style="-webkit-user-drag: none; -webkit-user-select: none;">
+            <span class="img_shadows"></span>
+        </div>
+    </div>
+    <ul>
+        <li><img src="./images/img1.jpg" alt="" onclick="bigImg(event)"></li>
+        <li><img src="./images/img2.jpg" alt="" onclick="bigImg(event)"></li>
+        <li><img src="./images/img3.jpg" alt="" onclick="bigImg(event)"></li>
+        <li><img src="./images/img4.jpg" alt="" onclick="bigImg(event)"></li>
+    </ul>
+    <script src="./js/jquery-3.1.1.min.js"></script>
+    <script src="./js/big_image.js"></script>
+    <script>
+        function bigImg(e) {
+            var src = e.target.src;
+            var el = this;
+            $(".img_box").bigImg({
+                width:600,
+                height:600,
+                imgEl: e.target,
+                imgUrl:src,
+                root:'.img_container',
+                origin:'.img_shadows'
+            });
+            $(".img_container").show();
+        }
+    </script>
+</body>
+</html>
