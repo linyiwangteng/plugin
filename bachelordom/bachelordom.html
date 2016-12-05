@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>至今单身7大原因</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="keywords" content="your keywords">
+    <meta name="description" content="your description">
+    <meta name="author" content="author,email address">
+    <style>
+        html { background: #f3f3f3; }
+        *{padding:0;margin:0;}
+        .cs_contain { width: 100%; }
+        .cs_contain img { display: block; width: 100%; }
+        .btn-box {position:relative; margin-top: -120px; }
+        .btn-box img { display: block; width: 70%; margin: 0 auto; }
+    </style>
+</head>
+<body>
+<div style="text-align: center;">
+    <input type="text" placeholder="请输入你的名字" style=" margin: 10px auto; " id="yourName" >
+    <span id="testBtn">测试</span>
+</div>
+<div class="cs_contain" style="position:relative;">
+    <img src="./images/bg02.png" alt="" id="bg02" style="display: block;">
+    <img src="./images/bg02.png" alt="" id="bg03" style="opacity: 0; position: absolute; left: 0;top:0; z-index: 999">
+</div>
+<div class="btn-box">
+    <img src="./images/btn02.png" alt="" >
+</div>
+
+<script src="./js/echarts.min.js"></script>
+<script src="./js/jquery-3.1.1.min.js"></script>
+<script src="./js/qrcode.min.js"></script>
+<script src="./js/jQuery.md5.js"></script>
+<script src="./js/bachelordom.js"></script>
+<script>
+    var img_src = $("#bg02").attr("src");
+    var img_width = $("#bg02")[0].naturalWidth;
+    var img_height = $("#bg02")[0].naturalHeight;
+    $("#testBtn").on("click", function () {
+        var name = $("#yourName").val();
+        if(!name) return false;
+        $.bachelor_tests(
+                {
+                    name:name,
+                    tg_url:'http://www.baidu.com',
+                    bgUrl:img_src,
+                    bgSize:{
+                        width:img_width,
+                        height:img_height
+                    },
+                    showPos:{
+                        pos1:$("#bg02"),
+                        pos2:$("#bg03")
+                    }
+                }
+        )
+    })
+</script>
+</body>
+</html>
