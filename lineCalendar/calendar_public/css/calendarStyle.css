@@ -1,0 +1,67 @@
+@charset "UTF-8";
+*{  padding: 0;  margin: 0;  }
+.ticket table{border-collapse: collapse;border-spacing: 0;width:100%;}
+.ticket th,.ticket td {width: 30px;height: 40px;text-align: center;line-height: 40px;border:1px solid #fefefe; box-sizing:border-box}
+.ticket th {font-size: 16px;}
+.ticket td {color: #404040;vertical-align: middle; position: relative;}
+
+.ticket .ono{width:30px;height:30px;position: absolute;left: 12px;top:5px; border:1px solid royalblue;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;}
+.calendar_month_next,.calendar_month_prev{width: 34px;height: 40px;cursor: pointer;background:#fff; line-height: 40px;}
+.calendar_month_next.iconfont,.calendar_month_prev.iconfont{color: #ff4e00;  font-size:24px;}
+.calendar_month_next {float: right;background-position:-42px -6px;}
+.calendar_month_span {display: inline;line-height: 40px;font-size: 16px;color: #656565;letter-spacing: 2px;font-weight: bold;}
+.calendar_month_prev {float: left;background-position:-5px -6px;}
+.ticket_succ_calendar_title {text-align: center;width:99%;border-left:1px solid #e3e3e3;border-right:1px solid #e3e3e3;background:#fff;
+    margin: 0 auto;
+    overflow: hidden;}
+.ticket_main {width: 100%;border-top:1px solid #e3e3e3;font-family: "Microsoft YaHei",SimHei;}
+
+.calendar_tab{  display: block;  width:100%;  height:100%;  -webkit-box-sizing: border-box;  -moz-box-sizing: border-box;  box-sizing: border-box;  }
+@font-face {font-family: "iconfont";
+    src: url('../iconfont/iconfont.eot?t=1481689887160'); /* IE9*/
+    src: url('../iconfont/iconfont.eot?t=1481689887160#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../iconfont/iconfont.woff?t=1481689887160') format('woff'), /* chrome, firefox */
+    url('../iconfont/iconfont.ttf?t=1481689887160') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+    url('../iconfont/iconfont.svg?t=1481689887160#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+    font-family:"iconfont" !important;
+    font-size:16px;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.icon-xiayige:before { content: "\e68c"; }
+.icon-shangyige:before { content: "\e68d"; }
+
+.calendar table tr td{
+    font-size: 14px;
+    line-height:18px;
+    width:14.2%;
+    height:54px;
+}
+.num_ticket{
+    display: block;
+    font-size:12px;
+    color: #ff4e00;
+
+}
+.price_ticket{
+    display: block;
+    font-size:12px;
+    color: #ff4e00;
+}
+.ticket_end{
+    color: #b6b6b6;
+}
+.ticket .current{
+    border:1px solid #ff4e00;
+    height:54px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
